@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../style.css"> -->
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="icon" href="../assets/images/logoBL.svg" type="image/x-icon">
+    <title>SoundWave — Регистрация</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logoBL.svg" alt="logo SoundWave">
+            SoundWave
+        </a>
+        <nav class="header-nav">
+            <a href="../index.html">Главная</a>
+            <a href="../pages/catalog.html">Каталог</a>
+            <a href="#">Исполнители</a>
+            <a href="#">Профиль</a>
+        </nav>
+    </header>
+
+    <main class="form-page">
+        <form id="registerForm" class="auth-form" novalidate>
+            <h1>Регистрация</h1>
+
+            <div class="form-group">
+                <label for="fullName">ФИО</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <span class="error" data-error="fullName"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" data-error="email"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="login">Логин</label>
+                <input type="text" id="login" name="login" required>
+                <span class="error" data-error="login"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <div class="password-wrap">
+                    <input type="password" id="password" name="password" required>
+                    <button type="button" class="toggle-pass" data-target="password">👁</button>
+                </div>
+                <span class="error" data-error="password"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Повтор пароля</label>
+                <div class="password-wrap">
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <button type="button" class="toggle-pass" data-target="confirmPassword">👁</button>
+                </div>
+                <span class="error" data-error="confirmPassword"></span>
+            </div>
+
+            <button type="submit" class="btn-primary">Зарегистрироваться</button>
+            <p class="form-footer">Уже есть аккаунт? <a href="login.html">Войти</a></p>
+        </form>
+    </main>
+
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>

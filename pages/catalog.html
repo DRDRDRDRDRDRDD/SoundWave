@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../style.css"> -->
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="icon" href="../assets/images/logoBL.svg" type="image/x-icon">
+    <title>SoundWave — Каталог</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="../index.html" class="logo">
+            <img src="../assets/images/logoBL.svg" alt="logo SoundWave">
+            SoundWave
+        </a>
+        <nav class="header-nav">
+            <a href="../index.html">Главная</a>
+            <a href="../pages/catalog.html" class="active">Каталог</a>
+            <a href="#">Исполнители</a>
+            <a href="#">Профиль</a>
+        </nav>
+        <div class="search-box">
+            <input type="search" id="searchInput" placeholder="Поиск...">
+        </div>
+        <button class="burger" id="burgerBtn" aria-label="Меню">☰</button>
+    </header>
+
+    <div class="layout">
+        <!-- боковая навигация -->
+        <aside class="sidebar" id="sidebar">
+            <nav class="side-nav">
+                <a href="../index.html">Главная</a>
+                <a href="catalog.html" class="active">Каталог</a>
+                <a href="#">Жанры</a>
+                <a href="#">Исполнители</a>
+                <a href="#">Топ альбомов</a>
+                <a href="#">Профиль</a>
+                <a href="../pages/login.html">Войти</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- каталог -->
+            <h1>Каталог альбомов</h1>
+            <div class="catalog-grid" id="catalogGrid">
+                <article class="album-card" data-title="Self Aware">
+                    <img src="../assets/images/Self Aware.svg" alt="Self Aware">
+                    <h3>Self Aware</h3>
+                    <p>Bearded Legends</p>
+                </article>
+                <article class="album-card" data-title="Moving To The Sun">
+                    <img src="../assets/images/Moving To The Sun.svg" alt="SMoving To The Sun">
+                    <h3>Moving To The Sun</h3>
+                    <p>GT</p>
+                </article>
+                <article class="album-card" data-title="SOMETHING AIN'T RIGHT">
+                    <img src="../assets/images/SOMETHING AIN'T RIGHT.svg" alt="SOMETHING AIN'T RIGHT">
+                    <h3>SOMETHING AIN'T RIGHT</h3>
+                    <p>XG</p>
+                </article>
+                <article class="album-card" data-title="Feel Special">
+                    <img src="../assets/images/Feel Special.svg" alt="Feel Special">
+                    <h3>Feel Special</h3>
+                    <p>twice</p>
+                </article>
+                <article class="album-card" data-title="Fancy Some More?">
+                    <img src="../assets/images/Fancy Some More.svg" alt="Fancy Some More?">
+                    <h3>Fancy Some More?</h3>
+                    <p> PinkPantheress</p>
+                </article>
+                <article class="album-card" data-title="A me mi piace">
+                    <img src="../assets/images/A me mi piace.svg" alt="A me mi piace">
+                    <h3>A me mi piace</h3>
+                    <p>Alfa & Manu Chao</p>
+                </article>
+                <article class="album-card" data-title="Red Pill Blues">
+                    <img src="../assets/images/Red Pill Blues.svg" alt="Red Pill Blues">
+                    <h3>Red Pill Blues</h3>
+                    <p>Maroon 5</p>
+                </article>
+                <article class="album-card" data-title="Снежное лето">
+                    <img src="../assets/images/Снежное лето.svg" alt="Снежное лето">
+                    <h3>Снежное лето</h3>
+                    <p>Нежное Это</p>
+                </article>
+                <article class="album-card" data-title="Prism">
+                    <img src="../assets/images/Prism.svg" alt="Prism">
+                    <h3>Prism</h3>
+                    <p>Katy Perry</p>
+                </article>
+                <article class="album-card" data-title="Nod-Krai">
+                    <img src="../assets/images/Nod-Krai.svg" alt="Nod-Krai">
+                    <h3>Nod-Krai</h3>
+                    <p>HOYO-MiX, Аврора</p>
+                </article>
+                <article class="album-card" data-title="The Fate of Ophelia">
+                    <img src="../assets/images/The Fate of Ophelia.svg" alt="The Fate of Ophelia">
+                    <h3>The Fate of Ophelia</h3>
+                    <p>Taylor Swift</p>
+                </article>
+                <article class="album-card" data-title="Сердцеедка">
+                    <img src="../assets/images/Сердцеедка.svg" alt="Сердцеедка">
+                    <h3>Сердцеедка</h3>
+                    <p>Егор Крид</p>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>

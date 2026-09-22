@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="example.css"> -->
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" href="assets/images/logoBL.svg" type="image/x-icon">
+    <title>SoundWave — Главная</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logoBL.svg" alt="logo SoundWave">
+            SoundWave
+        </a>
+        <nav class="header-nav">
+            <a href="index.html" class="active">Главная</a>
+            <a href="pages/catalog.html">Каталог</a>
+            <a href="#">Исполнители</a>
+            <a href="#">Профиль</a>
+        </nav>
+        <div class="search-box">
+            <input type="search" id="searchInput" placeholder="Поиск...">
+        </div>
+        <button class="burger" id="burgerBtn" aria-label="Меню">☰</button>
+    </header>
+
+    <div class="layout">
+        <!-- боковая навигация -->
+        <aside class="sidebar" id="sidebar">
+            <nav class="side-nav">
+                <a href="index.html" class="active">Главная</a>
+                <a href="pages/catalog.html">Каталог</a>
+                <a href="#">Жанры</a>
+                <a href="#">Исполнители</a>
+                <a href="#">Топ альбомов</a>
+                <a href="#">Профиль</a>
+                <a href="pages/login.html">Войти</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- рекомендаций -->
+            <section class="section">
+                <h2>Рекомендации</h2>
+                <div class="carousel" id="recommendCarousel">
+                    <article class="album-card" data-title="Self Aware">
+                        <img src="assets/images/Self Aware.svg" alt="Self Aware">
+                        <h3>Self Aware</h3>
+                        <p>Bearded Legends</p>
+                    </article>
+                    <article class="album-card" data-title="Moving To The Sun">
+                        <img src="assets/images/Moving To The Sun.svg" alt="SMoving To The Sun">
+                        <h3>Moving To The Sun</h3>
+                        <p>GT</p>
+                    </article>
+                    <article class="album-card" data-title="SOMETHING AIN'T RIGHT">
+                        <img src="assets/images/SOMETHING AIN'T RIGHT.svg" alt="SOMETHING AIN'T RIGHT">
+                        <h3>SOMETHING AIN'T RIGHT</h3>
+                        <p>XG</p>
+                    </article>
+                    <article class="album-card" data-title="Feel Special">
+                        <img src="assets/images/Feel Special.svg" alt="Feel Special">
+                        <h3>Feel Special</h3>
+                        <p>twice</p>
+                    </article>
+                    <article class="album-card" data-title="Fancy Some More?">
+                        <img src="assets/images/Fancy Some More.svg" alt="Fancy Some More?">
+                        <h3>Fancy Some More?</h3>
+                        <p> PinkPantheress</p>
+                    </article>
+                    <article class="album-card" data-title="A me mi piace">
+                        <img src="assets/images/A me mi piace.svg" alt="A me mi piace">
+                        <h3>A me mi piace</h3>
+                        <p>Alfa & Manu Chao</p>
+                    </article>
+                    <article class="album-card" data-title="Red Pill Blues">
+                        <img src="assets/images/Red Pill Blues.svg" alt="Red Pill Blues">
+                        <h3>Red Pill Blues</h3>
+                        <p>Maroon 5</p>
+                    </article>
+                    <article class="album-card" data-title="Снежное лето">
+                        <img src="assets/images/Снежное лето.svg" alt="Снежное лето">
+                        <h3>Снежное лето</h3>
+                        <p>Нежное Это</p>
+                    </article>
+                    <article class="album-card" data-title="Prism">
+                        <img src="assets/images/Prism.svg" alt="Prism">
+                        <h3>Prism</h3>
+                        <p>Katy Perry</p>
+                    </article>
+                    <article class="album-card" data-title="Nod-Krai">
+                        <img src="assets/images/Nod-Krai.svg" alt="Nod-Krai">
+                        <h3>Nod-Krai</h3>
+                        <p>HOYO-MiX, Аврора</p>
+                    </article>
+                </div>
+            </section>
+
+            <div class="columns">
+                <!-- мой плейлист -->
+                <section class="section playlist">
+                    <h2>Мой плейлист</h2>
+                    <div class="track-list" id="myPlaylist">
+                        <div class="track" data-title="Self Aware">
+                            <img src="assets/images/Self Aware Mus.svg" alt="Self Aware">
+                            <button class="play-btn" aria-label="Play">▶</button>
+                            <div class="track-info">
+                                <span class="track-title">Self Aware</span>
+                                <span class="track-artist">Bearded Legends</span>
+                            </div>
+                            <button class="like-btn" aria-label="Нравится">❤</button>
+                            <button class="remove-btn" aria-label="Удалить">🗑</button>
+                        </div>
+                        <div class="track" data-title="Moving To The Sun">
+                            <img src="assets/images/Moving To The Sun.svg" alt="Moving To The Sun">
+                            <button class="play-btn" aria-label="Play">▶</button>
+                            <div class="track-info">
+                                <span class="track-title">Moving To The Sun</span>
+                                <span class="track-artist">GT</span>
+                            </div>
+                            <button class="like-btn" aria-label="Нравится">❤</button>
+                            <button class="remove-btn" aria-label="Удалить">🗑</button>
+                        </div>
+                        <div class="track" data-title="Gala">
+                            <img src="assets/images/Gala.svg" alt="Gala">
+                            <button class="play-btn" aria-label="Play">▶</button>
+                            <div class="track-info">
+                                <span class="track-title">Gala</span>
+                                <span class="track-artist">XG</span>
+                            </div>
+                            <button class="like-btn" aria-label="Нравится">❤</button>
+                            <button class="remove-btn" aria-label="Удалить">🗑</button>
+                        </div>
+                        <div class="track" data-title="Gala">
+                            <img src="assets/images/Gala.svg" alt="Gala">
+                            <button class="play-btn" aria-label="Play">▶</button>
+                            <div class="track-info">
+                                <span class="track-title">Gala</span>
+                                <span class="track-artist">XG</span>
+                            </div>
+                            <button class="like-btn" aria-label="Нравится">❤</button>
+                            <button class="remove-btn" aria-label="Удалить">🗑</button>
+                        </div>
+                        <div class="track" data-title="Gala">
+                            <img src="assets/images/Gala.svg" alt="Gala">
+                            <button class="play-btn" aria-label="Play">▶</button>
+                            <div class="track-info">
+                                <span class="track-title">Gala</span>
+                                <span class="track-artist">XG</span>
+                            </div>
+                            <button class="like-btn" aria-label="Нравится">❤</button>
+                            <button class="remove-btn" aria-label="Удалить">🗑</button>
+                        </div>
+                        <div class="track" data-title="Gala">
+                            <img src="assets/images/Gala.svg" alt="Gala">
+                            <button class="play-btn" aria-label="Play">▶</button>
+                            <div class="track-info">
+                                <span class="track-title">Gala</span>
+                                <span class="track-artist">XG</span>
+                            </div>
+                            <button class="like-btn" aria-label="Нравится">❤</button>
+                            <button class="remove-btn" aria-label="Удалить">🗑</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- топ 10 -->
+                <section class="section-top10">
+                    <h2>Топ недели</h2>
+                    <div class="top-albums">
+                        <article class="album-card small">
+                            <img src="assets/images/A me mi piace.svg" alt="A me mi piace">
+                            <h3>A me mi piace</h3>
+                            <p>Alfa & Manu Chao</p>
+                        </article>
+                        <article class="album-card small">
+                            <img src="assets/images/Future Nostalgia.svg" alt="Future Nostalgia">
+                            <h3>Future Nostalgia</h3>
+                            <p>Dua Lipa</p>
+                        </article>
+                        <article class="album-card small">
+                            <img src="assets/images/Nod-Krai.svg" alt="Nod-Krai">
+                            <h3>Nod-Krai</h3>
+                            <p>HOYO-MiX, Аврора</p>
+                        </article>
+                        <article class="album-card small">
+                            <img src="assets/images/Hot Pink.svg" alt="Hot Pink">
+                            <h3>Hot Pink</h3>
+                            <p>Doja Cat</p>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- плеер -->
+    <footer class="player" id="player">
+        <div class="player-track">
+            <img src="assets/images/A me mi piace.svg" alt="Обложка" id="playerCover">
+            <div>
+                <span class="player-title" id="playerTitle">A me mi piace</span>
+                <span class="player-artist" id="playerArtist">Alfa & Manu Chao</span>
+            </div>
+        </div>
+        <div class="player-progress">
+            <input type="range" id="progressBar" min="0" max="100" value="0">
+            <span id="timeLabel">0:00 / 3:45</span>
+        </div>
+        <div class="player-controls">
+            <button id="prevBtn" aria-label="Назад">⏮</button>
+            <button id="playPauseBtn" aria-label="Стоп">⏸</button>
+            <button id="nextBtn" aria-label="Вперёд">⏭</button>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
