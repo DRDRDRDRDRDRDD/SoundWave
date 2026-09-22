@@ -40,6 +40,7 @@ body {
 }
 
 .logo {
+    color: var(--accent);
     display: flex;
     align-items: center;
     flex-shrink: 0;
@@ -51,7 +52,6 @@ body {
     width: 35px;
 }
 
-/* центральная навигация — только на десктопе */
 .header-nav {
     display: none;
     gap: 24px;
@@ -101,13 +101,21 @@ body {
 .burger {
     background: none;
     border: none;
-    color: var(--text);
     margin-left: 10px;
-    font-size: 22px;
-    width: 30px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
     cursor: pointer;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
+}
+
+.burger img {
+    width: 32px;
+    height: 32px;
+    display: block;
 }
 
 /* боковая навигация */
@@ -281,9 +289,20 @@ main {
     border-radius: 50%;
     border: none;
     background: var(--accent);
-    color: #fff;
     cursor: pointer;
-    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    flex-shrink: 0;
+    transition: background .2s, transform .2s;
+}
+
+.play-btn img {
+    width: 14px;
+    height: 14px;
+    display: block;
+    background: none;
 }
 
 .track-info {
@@ -305,11 +324,22 @@ main {
 .remove-btn {
     background: none;
     border: none;
-    width: 20px;
-    font-size: 17px;
+    width: 22px;
+    height: 22px;
+    padding: 0;
     cursor: pointer;
-    color: var(--muted);
-    transition: color .2s, transform .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform .2s;
+}
+
+.like-btn img,
+.remove-btn img {
+    width: 20px;
+    height: 20px;
+    display: block;
 }
 
 .like-btn:hover,
@@ -399,25 +429,43 @@ main {
 .player-controls {
     display: flex;
     gap: 8px;
-    width: 120px;
+    align-items: center;
     justify-content: flex-end;
 }
 
 .player-controls button {
-    width: 25px;
-    height: 25px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     border: none;
     background: var(--bg);
-    color: var(--text);
-    font-size: 16px;
     cursor: pointer;
-    transition: background .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: background .2s, transform .2s;
+}
+
+.player-controls button img {
+    width: 20px;
+    height: 20px;
+    display: block;
 }
 
 .player-controls button:hover {
     background: var(--accent);
-    color: #fff;
+    transform: scale(1.05);
+}
+
+#playPauseBtn {
+    background: var(--accent);
+    width: 35px;
+    height: 35px;
+}
+
+#playPauseBtn:hover {
+    background: var(--accent-hover);
 }
 
 .catalog-grid {
@@ -438,6 +486,10 @@ main {
     align-items: center;
     width: 20px;
     height: 20px;
+}
+
+.playPauseBtn {
+    background-color: var(--accent);
 }
 
 /* регистрация и вход */
@@ -621,8 +673,18 @@ main {
     }
 
     .player-controls button {
-        width: 30px;
-        height: 30px;
+        width: 32px;
+        height: 32px;
+    }
+
+    #playPauseBtn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .player-controls button img {
+        width: 14px;
+        height: 14px;
     }
 
     .player-progress span {

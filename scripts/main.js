@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     initBurger();
     initSearch();
-    initLikeButtons();
-    initRemoveButtons();
     initPlayer();
     initPlayButtons();
     initPasswordToggles();
@@ -21,7 +19,6 @@ function initBurger() {
         sidebar.classList.toggle('open');
     });
 
-    // клик по ссылке в sidebar — закрываем на мобильных
     sidebar.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             if (window.innerWidth < 1024) {
@@ -30,7 +27,6 @@ function initBurger() {
         });
     });
 
-    // клик вне sidebar — закрываем
     document.addEventListener('click', (e) => {
         if (window.innerWidth >= 1024) return;
         if (!sidebar.classList.contains('open')) return;
@@ -62,30 +58,6 @@ function initSearch() {
     });
 }
 
-/* лайк */
-function initLikeButtons() {
-    document.querySelectorAll('.like-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            btn.classList.toggle('active');
-            btn.textContent = btn.classList.contains('active') ? '❤' : '❤';
-        });
-    });
-}
-
-/* удаление трека */
-function initRemoveButtons() {
-    document.querySelectorAll('.remove-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const track = btn.closest('.track');
-            if (track) {
-                track.style.transition = 'opacity .3s, transform .3s';
-                track.style.opacity = '0';
-                track.style.transform = 'translateX(-20px)';
-                setTimeout(() => track.remove(), 300);
-            }
-        });
-    });
-}
 
 /* показать/скрыть пароль */
 function initPasswordToggles() {
@@ -146,7 +118,6 @@ function initLoginForm() {
         }
     });
 
-    // сброс ошибки при вводе
     form.querySelectorAll('input').forEach(input => {
         input.addEventListener('input', () => setError(input, ''));
     });
@@ -208,7 +179,6 @@ function initRegisterForm() {
         }
     });
 
-    // сброс ошибки при вводе
     form.querySelectorAll('input').forEach(input => {
         input.addEventListener('input', () => setError(input, ''));
     });
