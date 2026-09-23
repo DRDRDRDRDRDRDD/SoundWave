@@ -340,6 +340,7 @@ main {
     width: 20px;
     height: 20px;
     display: block;
+    background: none;
 }
 
 .like-btn:hover,
