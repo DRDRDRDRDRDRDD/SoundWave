@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     initBurger();
     initSearch();
-    initPlayer();
-    initPlayButtons();
     initPasswordToggles();
     initLoginForm();
     initRegisterForm();
@@ -58,7 +56,6 @@ function initSearch() {
     });
 }
 
-
 /* показать/скрыть пароль */
 function initPasswordToggles() {
     document.querySelectorAll('.toggle-pass').forEach(btn => {
@@ -70,7 +67,7 @@ function initPasswordToggles() {
     });
 }
 
-/* утилиты */
+/* утилиты валидации */
 function setError(input, message) {
     const span = document.querySelector(`.error[data-error="${input.id}"]`);
     if (span) span.textContent = message || '';
@@ -86,99 +83,104 @@ function isEmail(value) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
-/* форма входа */
+/* Форма входа */
 function initLoginForm() {
     const form = document.getElementById('loginForm');
     if (!form) return;
 
+    const login = document.getElementById('loginEmail');
+    const pass = document.getElementById('loginPassword');
+    const password = document.getElementById('password');
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         clearErrors(form);
-        let ok = true;
-
-        const login = form.loginEmail;
-        const pass = form.loginPassword;
+        let isValid = true;
 
         if (!login.value.trim()) {
-            setError(login, 'Введите email или логин');
-            ok = false;
+            setError(login, 'Заполните поле');
+            isValid = false;
         }
 
         if (!pass.value) {
-            setError(pass, 'Введите пароль');
-            ok = false;
+            setError(pass, 'Заполните поле');
+            isValid = false;
         } else if (pass.value.length < 8) {
             setError(pass, 'Пароль должен содержать не менее 8 символов');
-            ok = false;
+            isValid = false;
         }
 
-        if (ok) {
-            alert('Вход выполнен успешно!');
+        if (isValid) {
+            alert('Успешный вход!');
             form.reset();
+            window.location.href = ' ';
         }
     });
 
+    // Очистка ошибки при повторном вводе
     form.querySelectorAll('input').forEach(input => {
         input.addEventListener('input', () => setError(input, ''));
     });
 }
 
-/* форма регистрации */
+/* Форма регистрации */
 function initRegisterForm() {
     const form = document.getElementById('registerForm');
     if (!form) return;
 
+    const fullName = document.getElementById('fullName');
+    const email = document.getElementById('email');
+    const login = document.getElementById('login');
+    const password = document.getElementById('password');
+    const confirm = document.getElementById('confirmPassword');
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         clearErrors(form);
-        let ok = true;
-
-        const fullName = form.fullName;
-        const email = form.email;
-        const login = form.login;
-        const password = form.password;
-        const confirm = form.confirmPassword;
+        let isValid = true;
 
         if (!fullName.value.trim()) {
-            setError(fullName, 'Введите ФИО');
-            ok = false;
+            setError(fullName, 'Заполните ФИО');
+            isValid = false;
         }
 
         if (!email.value.trim()) {
-            setError(email, 'Введите email');
-            ok = false;
+            setError(email, 'Заполните Email');
+            isValid = false;
         } else if (!isEmail(email.value.trim())) {
-            setError(email, 'Некорректный email');
-            ok = false;
+            setError(email, 'Некорректный формат Email');
+            isValid = false;
         }
 
         if (!login.value.trim()) {
-            setError(login, 'Введите логин');
-            ok = false;
+            setError(login, 'Заполните логин');
+            isValid = false;
         }
 
         if (!password.value) {
-            setError(password, 'Введите пароль');
-            ok = false;
+            setError(password, 'Заполните пароль');
+            isValid = false;
         } else if (password.value.length < 8) {
             setError(password, 'Пароль должен содержать не менее 8 символов');
-            ok = false;
+            isValid = false;
         }
 
         if (!confirm.value) {
             setError(confirm, 'Повторите пароль');
-            ok = false;
+            isValid = false;
         } else if (confirm.value !== password.value) {
             setError(confirm, 'Пароли не совпадают');
-            ok = false;
+            isValid = false;
         }
 
-        if (ok) {
+        if (isValid) {
             alert('Регистрация прошла успешно!');
             form.reset();
+            window.location.href = ' ';
         }
     });
 
+    // Снятие ошибок при вводе данных
     form.querySelectorAll('input').forEach(input => {
         input.addEventListener('input', () => setError(input, ''));
     });
